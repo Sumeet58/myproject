@@ -1,0 +1,17 @@
+---
+- name: create a user
+  hosts: all
+
+  tasks:
+   -  name: Create a login user
+      user:
+        name: sume
+        password: sum@123
+        
+ - name: create a file
+   hosts: all
+   tasks:
+    file:
+      path: "/server.txt"
+      state: touch
+      content: my name is sum

@@ -1,0 +1,12 @@
+#- hosts: 10.0.0.8
+ # gather_facts: True
+  #gather_subset:
+    #- network
+    #- virtual
+
+- name: Gather info
+  hosts: [win]
+  tasks:
+    - debug: var=vars
+    - debug: var=ansible_distribution
+
